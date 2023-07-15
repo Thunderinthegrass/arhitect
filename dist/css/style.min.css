@@ -157,7 +157,6 @@ body {
 }
 
 .header {
-  padding: 30px 0;
   position: sticky;
   top: 0;
   left: 0;
@@ -165,7 +164,7 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.header.sticky {
+.header.sticky .container {
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -176,6 +175,13 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .header__logo {
   width: 222px;
@@ -192,6 +198,22 @@ body {
 }
 .header .request-btn {
   display: none;
+  max-width: 335px;
+  width: 100%;
+  padding: 17px 0;
+  background: #660000;
+  color: #ffffff;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.header .request-btn:hover {
+  color: #1f1f1f;
+  background: #ffffff;
+}
+.header .request-btn:active {
+  color: #1f1f1f;
+  background: #A5A5A5;
 }
 .header .nav__list {
   display: -webkit-box;
@@ -230,6 +252,9 @@ body {
 .header__email:active {
   color: #474747;
 }
+.header__email_mobile {
+  display: none;
+}
 .header__phone {
   color: #ffffff;
   -webkit-transition: 0.3s;
@@ -245,6 +270,14 @@ body {
 .header__phone_mobile {
   display: none;
 }
+.header .mobile-menu-btn {
+  width: 50px;
+  height: 50px;
+}
+.header .mobile-menu-btn svg {
+  width: 100%;
+  height: 100%;
+}
 @media (max-width: 1570px) {
   .header .nav__list {
     gap: 30px;
@@ -256,6 +289,38 @@ body {
 @media (max-width: 1420px) {
   .header__contacts {
     display: none;
+  }
+  .header .nav {
+    position: absolute;
+    top: 100%;
+    background: #000;
+    width: 100%;
+    left: 0;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 50px;
+    padding-top: 50px;
+  }
+  .header .nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__email_mobile {
+    display: block;
+  }
+  .header__phone_mobile {
+    display: block;
+  }
+  .header .request-btn {
+    display: block;
   }
 }
 

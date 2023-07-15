@@ -126,3 +126,21 @@ if (header) {
     }
   })
 }
+
+//мобильное меню
+const menuBtn = document.querySelector(".menu-btn");
+const nav = document.querySelector(".nav");
+
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("active");
+  nav.classList.toggle("active");
+  document.body.classList.toggle("ov-hidden");
+});
+
+nav.querySelectorAll("a").forEach((elem) => {
+  elem.addEventListener("click", () => {
+    menuBtn.classList.remove("active");
+    nav.classList.remove("active");
+    document.body.classList.remove("ov-hidden");
+  });
+});
