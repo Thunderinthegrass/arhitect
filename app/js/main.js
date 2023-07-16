@@ -91,22 +91,17 @@
 // }
 // cityModal();
 
-// const swiper = new Swiper(".hero__slider", {
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   autoplay: {
-//     delay: 3000,
-//   },
-//   loop: "infinite",
-//   effect: "fade",
-//   pagination: {
-//     el: ".swiper-pagination",
-//     type: "bullets",
-//     clickable: true,
-//   },
-// });
+const heroSwiper = new Swiper(".hero__slider", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
+  },
+});
 
 //изменение хедера при прокрутке и прилипании
 let header =  document.querySelector('.header');
@@ -137,7 +132,7 @@ menuBtn.addEventListener("click", () => {
   document.body.classList.toggle("ov-hidden");
 });
 
-nav.querySelectorAll("a").forEach((elem) => {
+nav.querySelectorAll("a, button").forEach((elem) => {
   elem.addEventListener("click", () => {
     menuBtn.classList.remove("active");
     nav.classList.remove("active");

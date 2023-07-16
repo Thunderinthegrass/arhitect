@@ -4,6 +4,7 @@
   left: 0;
   background: #1f1f1f;
   transition: 0.3s;
+  z-index: 1;
   &.sticky {
     .container {
       padding-top: 10px;
@@ -176,7 +177,7 @@
       &.active {
         visibility: visible;
         opacity: 1;
-        z-index: 0;
+        z-index: 1;
       }
     }
     .nav__list {

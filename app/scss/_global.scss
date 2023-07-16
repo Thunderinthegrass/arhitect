@@ -9,7 +9,7 @@ body {
   font-weight: 500;
   line-height: 170%;
   color: #ffffffa1;
-  background: #1F1F1F;
+  background: #1f1f1f;
 }
 .wrapper {
   display: flex;
@@ -28,6 +28,27 @@ body {
   padding: 0 20px;
   margin: 0 auto;
   position: relative;
+}
+.request-btn {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  color: #ffffff;
+  padding: 10px 0;
+  background: #660000;
+  text-align: center;
+  transition: .3s;
+  max-width: 350px;
+  width: 100%;
+  &:hover {
+    color: #1f1f1f;
+    background: #ffffff;
+  }
+  &:active {
+    color: #1f1f1f;
+    background: #a5a5a5;
+  }
 }
 .d-none {
   display: none;

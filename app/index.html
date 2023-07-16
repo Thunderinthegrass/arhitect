@@ -18,7 +18,7 @@
         <a href="tel:88000000000" class="header__phone header__phone_mobile">
           8 800 000 00 00
         </a>
-        <button class="menu-btn" type="button">
+        <button class="menu-btn" type="button" aria-label="кнопка меню">
           <svg class="menu-icon">
             <use xlink:href="img/sprite/sprite.svg#menu-icon"></use>
           </svg>
@@ -30,7 +30,7 @@
           <a href="mailto:info@mail.ru" class="header__email header__email_mobile">
             info@mail.ru
           </a>
-          <div class="request-btn">Оставить заявку</div>
+          <button class="request-btn" type="button" aria-label="оставить заявку">Оставить заявку</button>
           <ul class="nav__list">
             <li class="nav__item"><a href="#" class="nav__link">Продукция</a></li>
             <li class="nav__item"><a href="#" class="nav__link">О компании</a></li>
@@ -50,7 +50,33 @@
       </div>
     </header>
     <section class="hero">
-      hero
+      <div class="container">
+        <h1 class="main-title hero__title">Инновационные материалы для вашего объекта</h1>
+        <div class="hero__middle">
+          <p class="hero__subtitle">
+            Фасады, полы, малые архитектурные формы
+          </p>
+          <button class="request-btn" type="button" aria-label="оставить заявку">Оставить заявку</button>
+        </div>
+      </div>
+      <div class="hero__slider">
+        <div class="swiper-wrapper">
+          <div class="hero__slide hero__slide_1 swiper-slide">
+            <img class="hero__slider-img" src="img/hero-slider/hero-img.jpg" alt="">
+          </div>
+          <div class="hero__slide hero__slide_2 swiper-slide">
+            <img class="hero__slider-img" src="img/hero-slider/hero-img.jpg" alt="">
+          </div>
+          <div class="hero__slide hero__slide_3 swiper-slide">
+            <img class="hero__slider-img" src="img/hero-slider/hero-img.jpg" alt="">
+          </div>
+        </div>
+        <div class="hero__slider-arrows">
+          <div class="swiper-button-prev swiper-button"></div>
+          <div class="swiper-button-next swiper-button"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
     <script src="js/main.min.js"></script>
   </body>
