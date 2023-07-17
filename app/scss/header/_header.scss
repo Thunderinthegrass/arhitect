@@ -1,7 +1,8 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   background: #1f1f1f;
   transition: 0.3s;
   z-index: 1;
@@ -139,7 +140,7 @@
     }
   }
   @media (max-width: 1420px) {
-    &__logo{
+    &__logo {
       width: 155px;
       height: 39px;
     }
@@ -157,6 +158,18 @@
     }
   }
   @media (max-width: 1110px) {
+    &.sticky {
+      .container {
+        padding-top: 15px;
+        padding-bottom: 0;
+      }
+    }
+    .container {
+      flex-direction: column;
+      align-items: start;
+      padding-top: 15px;
+      padding-bottom: 0;
+    }
     &__contacts {
       display: none;
     }
@@ -167,13 +180,14 @@
       opacity: 0;
       width: 100%;
       left: 0;
-      height: 100vh;
+      height: calc(100vh - 82px);
       flex-direction: column;
-      gap: 50px;
+      justify-content: space-between;
       padding-top: 50px;
       transition: 0.3s;
       z-index: -1;
       background: #1f1f1f;
+      padding-bottom: 80px;
       &.active {
         visibility: visible;
         opacity: 1;
@@ -189,6 +203,7 @@
     }
     &__phone_mobile {
       display: block;
+      position: static;
     }
     .request-btn {
       display: block;

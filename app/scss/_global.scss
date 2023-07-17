@@ -41,17 +41,91 @@ body {
   transition: .3s;
   max-width: 350px;
   width: 100%;
+  cursor: pointer;
   &:hover {
     color: #1f1f1f;
     background: #ffffff;
   }
   &:active {
-    color: #1f1f1f;
-    background: #a5a5a5;
+    color: #1f1f1f!important;
+    background: #a5a5a5!important;
   }
 }
 .d-none {
   display: none;
+}
+.ov-hidden{
+  overflow: hidden;
+}
+.slider-arrows {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  right: 100px;
+  bottom: 50px;
+}
+.swiper-button {
+  width: 64px;
+  height: 64px;
+  background: #660000;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &.swiper-button-disabled {
+    background: #474747!important;
+    &:hover{
+      .slider-arrow{
+        fill: #ffffff;
+      }
+    }
+  }
+  &:hover {
+    background: #ffffff;
+    .slider-arrow{
+      fill: #1f1f1f;
+      @media (max-width: 767px){
+        fill: #ffffff;
+      }
+    }
+  }
+  &:active {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .slider-arrow{
+    width: 18px;
+    height: 14px;
+    fill: #ffffff;
+    transition: .3s;
+    &.arrow-next{
+      transform: rotate(180deg);
+    }
+  }
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    transition: 0.3s;
+    background: #474747;
+    &:hover {
+      background: rgba(255, 255, 255, 0.6);
+    }
+    &:active {
+      background: #ffffff;
+    }
+    &-active {
+      background: #ffffff;
+      transform: perspective(400px) scaleZ(1.5) translateZ(71px);
+    }
+  }
 }
 .modal-overlay {
   position: fixed;

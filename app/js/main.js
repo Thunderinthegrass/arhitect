@@ -104,23 +104,28 @@ const heroSwiper = new Swiper(".hero__slider", {
 });
 
 //изменение хедера при прокрутке и прилипании
-let header =  document.querySelector('.header');
+let scroll = () => {
+  if (document.body.clientWidth <= 1110) {
+    return;
+  }
 
-if (header) {
-  window.addEventListener("scroll", function() {
-    let scroll = document.querySelector("body");
-    let scrollHeight = scroll.getBoundingClientRect().top;
-  
-    // console.log(scrollHeight);
-  
-    if (scrollHeight < 0) {
-      header.classList.add('sticky');
-    }
-    else{
-      header.classList.remove('sticky');
-    }
-  })
+  let header =  document.querySelector('.header');
+
+  if (header) {
+    window.addEventListener("scroll", function() {
+      let scroll = document.querySelector("body");
+      let scrollHeight = scroll.getBoundingClientRect().top;
+    
+      if (scrollHeight < 0) {
+        header.classList.add('sticky');
+      }
+      else{
+        header.classList.remove('sticky');
+      }
+    })
+  }
 }
+scroll();
 
 //мобильное меню
 const menuBtn = document.querySelector(".menu-btn");
