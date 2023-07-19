@@ -53,7 +53,7 @@
           <p class="hero__subtitle">
             Фасады, полы, малые архитектурные формы
           </p>
-          <button class="request-btn" type="button" aria-label="оставить заявку">Оставить заявку</button>
+          <button class="request-btn" type="button" aria-label="оставить заявку" data-path="modal-form">Оставить заявку</button>
         </div>
       </div>
       <div class="hero__slider-wrapper">
@@ -88,6 +88,49 @@
     <section class="about">
 
     </section>
+    <div class="modal-overlay">
+      <div class="modal modal-form" data-target="modal-form">
+        <button type="button" class="close-btn">
+          <svg class="modal-close-icon">
+            <use xlink:href="img/sprite/sprite.svg#modal-close-icon"></use>
+          </svg>
+        </button>
+        <div class="modal-form__img">
+
+        </div>
+        <form action="" class="modal-form__form">
+          <p class="modal-form__title">Оставить заявку</p>
+          <div class="modal-form__inputs">
+            <div class="input-wrapper">
+              <input type="text" id="name-input" class="modal-form__input name-input modal-form__item">
+              <label for="name-input" class="label name-label">
+                ФИО
+              </label>
+            </div>
+            <div class="input-wrapper">
+              <input type="text" id="tel-input" class="modal-form__input tel-input modal-form__item">
+              <label for="tel-input" class="label name-label">
+                Контактный телефон
+              </label>
+            </div>
+            <div class="input-wrapper">
+              <input type="text" id="company-input" class="modal-form__input company-input modal-form__item">
+              <label for="company-input" class="label name-label">
+                Название компании
+              </label>
+            </div>
+          </div>
+          <div class="textarea-wrapper">
+            <textarea class="modal-form__textarea modal-form__item" id="textarea" rows="1"></textarea>
+            <label for="textarea" class="label textarea-label">Сообщение</label>
+          </div>
+          <p class="privacy-policy">
+            Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#" class="data-collection-link" aria-label="Политикой обработки данных">Политикой обработки данных</a> и <a href="#" class="privacy-link" aria-label="Политикой конфиденциальности">Политикой конфиденциальности</a>
+          </p>
+          <button type="submit" class="modal-form__send-btn request-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>
