@@ -1,18 +1,18 @@
-// function scrollToLink() {
-//   const anchors = document.querySelectorAll('a[href*="#"]');
+function scrollToLink() {
+  const anchors = document.querySelectorAll('a[href*="#"]');
 
-//   for (let anchor of anchors) {
-//     anchor.addEventListener("click", function (event) {
-//       event.preventDefault();
-//       const blockID = anchor.getAttribute("href");
-//       document.querySelector("" + blockID).scrollIntoView({
-//         behavior: "smooth",
-//         block: "start",
-//       });
-//     });
-//   }
-// }
-// scrollToLink();
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const blockID = anchor.getAttribute("href");
+      document.querySelector("" + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+}
+scrollToLink();
 
 // function cityPopup() {
 //   const cityBtn = document.querySelector(".header__city-btn");
@@ -103,7 +103,7 @@ const heroSwiper = new Swiper(".hero__slider", {
   },
 });
 
-//изменение хедера при прокрутке и прилипании
+// изменение хедера при прокрутке и прилипании
 let scroll = () => {
   if (document.body.clientWidth <= 1110) {
     return;

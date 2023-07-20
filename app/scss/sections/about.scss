@@ -1,3 +1,76 @@
-.about{
+.about {
   padding-top: 150px;
+  position: relative;
+  .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 100px;
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+  }
+  &__info {
+    padding: 120px 100px;
+    background: #660000;
+    width: calc(50% + 160px);
+    width: 100%;
+  }
+  &__info-inner {
+    width: 920px;
+    // width: 100%;
+    margin-left: auto;
+  }
+  &__title {
+    margin-bottom: 80px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "Компания";
+      left: -50px;
+      top: 26px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.1);
+      font-size: 110px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 110%;
+    }
+  }
+  &__info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+  }
+  &__img {
+    max-width: 600px;
+    width: 100%;
+    // background-image: url(../../img/about/about-img.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+  }
+  @media (max-width: 1640px) {
+    &__info{
+      z-index: 1;
+    }
+    &__img{
+      position: absolute;
+      height: 100%;
+      right: 0;
+      bottom: -92px;
+    }
+  }
+  @media (max-width: 1280px) {
+    .container{
+      padding-right: 50px;
+    }
+    &__info{
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    &__info-inner{
+      max-width: 920px;
+      width: 100%;
+    }
+  }
 }

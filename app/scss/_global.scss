@@ -29,6 +29,13 @@ body {
   margin: 0 auto;
   position: relative;
 }
+.section-title {
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  color: #ffffff;
+}
 .request-btn {
   font-size: 22px;
   font-style: normal;
@@ -38,7 +45,7 @@ body {
   padding: 14.5px 0;
   background: #660000;
   text-align: center;
-  transition: .3s;
+  transition: 0.3s;
   max-width: 350px;
   width: 100%;
   cursor: pointer;
@@ -47,14 +54,14 @@ body {
     background: #ffffff;
   }
   &:active {
-    color: #1f1f1f!important;
-    background: #a5a5a5!important;
+    color: #1f1f1f !important;
+    background: #a5a5a5 !important;
   }
 }
 .d-none {
   display: none;
 }
-.ov-hidden{
+.ov-hidden {
   overflow: hidden;
 }
 .slider-arrows {
@@ -74,18 +81,18 @@ body {
   align-items: center;
   cursor: pointer;
   &.swiper-button-disabled {
-    background: #474747!important;
-    &:hover{
-      .slider-arrow{
+    background: #474747 !important;
+    &:hover {
+      .slider-arrow {
         fill: #ffffff;
       }
     }
   }
   &:hover {
     background: #ffffff;
-    .slider-arrow{
+    .slider-arrow {
       fill: #1f1f1f;
-      @media (max-width: 767px){
+      @media (max-width: 767px) {
         fill: #ffffff;
       }
     }
@@ -93,12 +100,12 @@ body {
   &:active {
     background: rgba(255, 255, 255, 0.6);
   }
-  .slider-arrow{
+  .slider-arrow {
     width: 18px;
     height: 14px;
     fill: #ffffff;
-    transition: .3s;
-    &.arrow-next{
+    transition: 0.3s;
+    &.arrow-next {
       transform: rotate(180deg);
     }
   }
