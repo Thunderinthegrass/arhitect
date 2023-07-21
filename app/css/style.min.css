@@ -88,6 +88,15 @@ body {
   background: #1f1f1f;
 }
 
+section {
+  padding-top: 150px;
+}
+@media (max-width: 1280px) {
+  section {
+    padding-top: 60px;
+  }
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,6 +134,11 @@ body {
   font-weight: 600;
   line-height: 140%;
   color: #ffffff;
+}
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 26px;
+  }
 }
 
 .request-btn {
@@ -258,7 +272,7 @@ body {
   background: #1f1f1f;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  z-index: 1;
+  z-index: 10;
 }
 .header.sticky .container {
   padding-top: 10px;
@@ -772,7 +786,7 @@ body {
   line-height: 110%;
   color: #ffffff;
   margin-bottom: 50px;
-  margin-top: 120px;
+  margin-top: 176px;
 }
 .hero__subtitle {
   font-weight: 600;
@@ -892,16 +906,7 @@ body {
   }
 }
 
-.middle {
-  height: 10px;
-  width: 100%;
-  background: #000000;
-  position: relative;
-  z-index: 10;
-}
-
 .about {
-  padding-top: 150px;
   position: relative;
 }
 .about .container {
@@ -956,8 +961,14 @@ body {
 .about__img {
   max-width: 600px;
   width: 100%;
+  background-image: url(../../img/about/about-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (max-width: 1640px) {
+  .about {
+    padding-bottom: 92px;
+  }
   .about__info {
     z-index: 1;
   }
@@ -981,9 +992,47 @@ body {
     width: 100%;
   }
 }
+@media (max-width: 992px) {
+  .about .container {
+    padding-right: 25px;
+  }
+  .about__info {
+    padding: 60px 20px;
+  }
+  .about__title {
+    margin-bottom: 24px;
+  }
+  .about__title::after {
+    font-size: 50px;
+    top: 6px;
+    left: -20px;
+  }
+  .about__info-text {
+    font-size: 17px;
+    line-height: 160%;
+    gap: 30px;
+  }
+}
 @supports (-webkit-appearance:none){
 .modal-form__img{background-image:url(../../img/modal-form/modal-form-img.webp)}
 .hero__slider .swiper-slide{background-image:url(../../img/hero-slider/hero-img.webp)}
+.about__img{background-image:url(../../img/about/about-img.webp)}
+}
+
+ @media (max-width: 1280px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 992px){
+
+@supports (-webkit-appearance:none){
+
+}
+
 }
 
  @media (max-width: 767px){
@@ -1026,23 +1075,7 @@ body {
 
 }
 
- @media (max-width: 992px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
  @media (max-width: 1640px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media (max-width: 1280px){
 
 @supports (-webkit-appearance:none){
 
