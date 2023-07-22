@@ -14,39 +14,6 @@ function scrollToLink() {
 }
 scrollToLink();
 
-// function cityPopup() {
-//   const cityBtn = document.querySelector(".header__city-btn");
-//   const cityCorrectBtn = document.querySelector('.city__correct-btn');
-//   const citySelectBtn = document.querySelector('.city__select-btn');
-//   const cityPopupBody = document.querySelectorAll('.city--popup')
-//   const cityPopup = document.querySelector(".city__popup");
-//   const cityPopupCloseBtn = document.querySelector('.city__popup-close-btn');
-  
-
-//   cityBtn.addEventListener("click", () => {
-//     cityPopup.classList.toggle("d-none");
-//   });
-
-//   cityPopupCloseBtn.addEventListener("click", () => {
-//     cityPopup.classList.toggle("d-none");
-//   });
-
-//   cityCorrectBtn.addEventListener('click', () => {
-//     cityPopup.classList.toggle("d-none");
-//   })
-
-//   citySelectBtn.addEventListener('click', () => {
-//     cityPopup.classList.toggle("d-none");
-//   })
-
-//   document.body.addEventListener('click', (e) => {
-//     if (!e.target.classList.contains('city--popup') && !cityPopup.classList.contains("d-none")) {
-//       cityPopup.classList.add("d-none");
-//     }
-//   })
-// }
-// cityPopup();
-
 function modal() {
   const btns = document.querySelectorAll(".request-btn");
   const modalOverlay = document.querySelector(".modal-overlay ");
@@ -101,6 +68,11 @@ const heroSwiper = new Swiper(".hero__slider", {
     type: "bullets",
     clickable: true,
   },
+});
+
+const advantagesSwiper = new Swiper(".advantages__slider", {
+    slidesPerView: 0,
+    spaceBetween: 30,
 });
 
 // изменение хедера при прокрутке и прилипании
