@@ -1,0 +1,116 @@
+.stages {
+  padding-bottom: 300px;
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  &__name-wrapper {
+    max-width: 1020px;
+    width: 100%;
+    padding: 28px 25px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    height: 93px;
+    border: 2px solid #474747;
+    margin-left: 700px;
+    transition: .3s;
+    &.active{
+      border-color: #fff;
+      color: #ffffff;
+      .stages__arrow{
+        transform: rotate(-45deg);
+        fill: #ffffff;
+      }
+      .stages__count{
+        color: #ffffff;
+      }
+      &:hover{
+        background: transparent;
+        .stages__arrow{
+          fill: #ffffff;
+        }
+        .stages__count{
+          color: #ffffff;
+        }
+      }
+    }
+    &:hover{
+      border-color: #fff;
+      color: #ffffff;
+      background: #474747;
+      .stages__arrow{
+        transform: rotate(-45deg);
+        fill: rgba(255, 255, 255, 0.6);
+      }
+      .stages__count{
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+    &:active{
+      border-color: #fff;
+      color: #ffffff;
+      background: transparent;
+      .stages__arrow{
+        transform: rotate(-45deg);
+        fill: #ffffff;
+      }
+      .stages__count{
+        color: #ffffff;
+      }
+    }
+  }
+  &__arrow {
+    width: 32px;
+    height: 32px;
+    margin-right: 35px;
+    transition: .3s;
+    fill: #474747;
+  }
+  &__count {
+    margin-right: 5px;
+    color: #474747;
+    pointer-events: none;
+  }
+  &__name{
+    pointer-events: none;
+  }
+  &__info {
+    padding: 50px;
+    width: 600px;
+    background: #660000;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: none;
+    &.active{
+      display: block;
+    }
+    &-name {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 140%;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    &-text {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 170%;
+    }
+  }
+}

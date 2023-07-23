@@ -150,3 +150,24 @@ let textareaTransfer = () => {
   }
 }
 textareaTransfer();
+
+//табы преимущества
+
+let stageTabs = () => {
+  let tabBtn = document.querySelectorAll('.stages__name-wrapper');
+  let tabInfo = document.querySelectorAll('.stages__info');
+
+  tabBtn.forEach((elem, id) => {
+
+    elem.addEventListener('click', () => {
+      tabBtn.forEach((elem, id) => {
+        elem.classList.remove('active');
+        tabInfo[id].classList.remove('active')
+      })
+
+      tabInfo[id].classList.add('active');
+      elem.classList.add('active');
+    })
+  })
+}
+stageTabs();
