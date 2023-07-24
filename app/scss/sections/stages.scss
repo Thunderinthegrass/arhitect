@@ -1,9 +1,8 @@
 .stages {
-  padding-bottom: 300px;
   &__title {
     margin-bottom: 50px;
   }
-  &__wrapper{
+  &__wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -26,48 +25,50 @@
     height: 93px;
     border: 2px solid #474747;
     margin-left: 700px;
-    transition: .3s;
-    &.active{
+    transition: 0.3s;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    &.active {
       border-color: #fff;
       color: #ffffff;
-      .stages__arrow{
+      .stages__arrow {
         transform: rotate(-45deg);
         fill: #ffffff;
       }
-      .stages__count{
+      .stages__count {
         color: #ffffff;
       }
-      &:hover{
+      &:hover {
         background: transparent;
-        .stages__arrow{
+        .stages__arrow {
           fill: #ffffff;
         }
-        .stages__count{
+        .stages__count {
           color: #ffffff;
         }
       }
     }
-    &:hover{
+    &:hover {
       border-color: #fff;
       color: #ffffff;
       background: #474747;
-      .stages__arrow{
+      .stages__arrow {
         transform: rotate(-45deg);
         fill: rgba(255, 255, 255, 0.6);
       }
-      .stages__count{
+      .stages__count {
         color: rgba(255, 255, 255, 0.6);
       }
     }
-    &:active{
+    &:active {
       border-color: #fff;
       color: #ffffff;
       background: transparent;
-      .stages__arrow{
+      .stages__arrow {
         transform: rotate(-45deg);
         fill: #ffffff;
       }
-      .stages__count{
+      .stages__count {
         color: #ffffff;
       }
     }
@@ -76,16 +77,17 @@
     width: 32px;
     height: 32px;
     margin-right: 35px;
-    transition: .3s;
+    transition: 0.3s;
     fill: #474747;
   }
   &__count {
-    margin-right: 5px;
+    margin-right: 25px;
     color: #474747;
     pointer-events: none;
   }
-  &__name{
+  &__name {
     pointer-events: none;
+    text-align: left;
   }
   &__info {
     padding: 50px;
@@ -96,9 +98,12 @@
     left: 0;
     top: 0;
     height: 100%;
-    display: none;
-    &.active{
-      display: block;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+      opacity: 1;
+      visibility: visible;
     }
     &-name {
       font-size: 26px;
@@ -111,6 +116,113 @@
       font-size: 22px;
       font-weight: 500;
       line-height: 170%;
+    }
+  }
+  @media (max-width: 1528px) {
+    &__name-wrapper {
+      margin-left: 650px;
+    }
+  }
+  @media (max-width: 1496px) {
+    &__item {
+      flex-direction: column;
+    }
+    &__name-wrapper {
+      margin-left: 0;
+      height: auto;
+      max-width: 100%;
+      position: relative;
+      align-items: center;
+      &.active {
+        .stages__arrow {
+          transform: translateY(-50%) rotate(225deg);
+        }
+        &:hover {
+          .stages__arrow {
+            transform: translateY(-50%) rotate(225deg);
+          }
+        }
+      }
+      &:hover {
+        .stages__arrow {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+    }
+    &__arrow {
+      position: absolute;
+      right: 15px;
+      margin-right: 0;
+      top: 50%;
+    }
+    &__arrow {
+      transform: translateY(-50%) rotate(180deg);
+    }
+    &__info {
+      position: static;
+      width: 100%;
+      height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 50px;
+      padding-right: 50px;
+      &.active {
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__wrapper {
+      gap: 15px;
+    }
+    &__name-wrapper {
+      padding: 15px;
+      padding-right: 50px;
+      &:hover {
+        background: transparent;
+        border-color: #474747;
+        .stages__count {
+          color: #474747;
+        }
+        .stages__name {
+          color: rgba(255, 255, 255, 0.6);
+        }
+        .stages__arrow {
+          fill: #474747;
+        }
+      }
+      &.active {
+        .stages__name {
+          color: #ffffff;
+        }
+      }
+    }
+    &__count {
+      font-size: 20px;
+      margin-right: 15px;
+    }
+    &__name {
+      font-size: 20px;
+    }
+    &__info {
+      padding-left: 15px;
+      padding-right: 15px;
+      &-text {
+        font-size: 17px;
+        line-height: 160%;
+      }
+      &-name {
+        display: none;
+      }
+      &.active {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
     }
   }
 }

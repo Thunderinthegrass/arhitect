@@ -158,16 +158,38 @@ let stageTabs = () => {
   let tabInfo = document.querySelectorAll('.stages__info');
 
   tabBtn.forEach((elem, id) => {
+    if (document.body.offsetWidth <= 1496) {//если ширина экрана меньше или равна 1496px
+      elem.classList.remove('active');//убираем активные классы у первых табов
+      tabInfo[id].classList.remove('active');
 
-    elem.addEventListener('click', () => {
-      tabBtn.forEach((elem, id) => {
-        elem.classList.remove('active');
-        tabInfo[id].classList.remove('active')
+      elem.addEventListener('click', (e) => {//если по клику на элемент
+
+        if (e.target.classList.contains('active')) {//у него есть класс active
+          e.target.classList.remove('active');//у этого элемента убираем класс active
+          e.target.closest('.stages__item').querySelector('.stages__info').classList.remove('active');// и у контента убираем класс active
+        }
+        else {//если по клику на элемент, у него нет класса active
+          tabBtn.forEach((elem, id) => {//то сначала делаем все активные элементы неактивными
+            elem.classList.remove('active');
+            tabInfo[id].classList.remove('active');
+
+            e.target.classList.add('active');//потом выбранный элемент активным
+            e.target.closest('.stages__item').querySelector('.stages__info').classList.add('active');
+          })
+        }
       })
-
-      tabInfo[id].classList.add('active');
-      elem.classList.add('active');
-    })
+    }
+    else {//если ширина больше, делаем обычные табы
+      elem.addEventListener('click', () => {
+        tabBtn.forEach((elem, id) => {
+          elem.classList.remove('active');
+          tabInfo[id].classList.remove('active')
+        })
+  
+        tabInfo[id].classList.add('active');
+        elem.classList.add('active');
+      })
+    }
   })
 }
 stageTabs();
