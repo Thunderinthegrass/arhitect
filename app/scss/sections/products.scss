@@ -1,0 +1,136 @@
+.products {
+  position: relative;
+  &__title {
+    margin-bottom: 50px;
+  }
+  .filters {
+    margin-bottom: 50px;
+    display: flex;
+    gap: 20px;
+  }
+  .filters__btn {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #ffffff;
+    padding: 6px 30px;
+    border: 2px solid #474747;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background: #474747;
+    }
+    &:active {
+      background: #660000;
+      border-color: #660000;
+    }
+    &.active {
+      background: #660000;
+      border-color: #660000;
+      &:hover {
+        background: #660000;
+        border-color: #660000;
+      }
+    }
+  }
+  &__slider{
+    overflow: hidden;
+    padding-bottom: 94px;
+    position: relative;
+  }
+  .swiper-wrapper {
+    display: inline-flex;
+  }
+  .slider-arrows{
+    right: 0;
+    bottom: 0;
+  }
+  &-swiper-pagination{
+    bottom: 28px;
+  }
+  .product {
+    max-width: calc(100% / 3);
+    width: 100%;
+    position: relative;
+    height: 605px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    border: 1px solid #474747;
+    &__img-wrapper {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 25px;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__info {
+      padding: 0 30px;
+      flex: 1;
+    }
+    &__title {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 140%;
+      color: #ffffff;
+      padding-right: 75px;
+      margin-bottom: 15px;
+    }
+    &__arrow {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 325px;
+      right: 30px;
+      transform: rotate(90deg);
+      fill: #ffffff;
+    }
+    &__descr {
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 170%;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+    &__bottom {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      padding: 0 30px;
+      margin-top: auto;
+      height: 60px;
+      margin-bottom: 20px;
+    }
+    &__order-btn {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 140%;
+      color: #ffffff;
+      background: #660000;
+      width: 200px;
+      height: 60px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        color: #1f1f1f;
+        background: #ffffff;
+      }
+      &:active {
+        color: #1f1f1f;
+        background: #a5a5a5;
+      }
+    }
+    &__price-wrapper {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 140%;
+      color: #ffffff;
+    }
+  }
+}

@@ -75,6 +75,20 @@ const advantagesSwiper = new Swiper(".advantages__slider", {
     spaceBetween: 30,
 });
 
+const productsSwiper = new Swiper(".products__slider", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".product-swiper-button-next",
+    prevEl: ".product-swiper-button-prev",
+  },
+  pagination: {
+    el: ".products-swiper-pagination",
+    type: "bullets",
+    clickable: true,
+  },
+});
+
 // изменение хедера при прокрутке и прилипании
 let scroll = () => {
   if (document.body.clientWidth <= 1110) {
